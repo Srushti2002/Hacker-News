@@ -1,3 +1,15 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +17,125 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #111827;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input{
+  background-color: transparent;
+  font-size:1.5rem;
+  outline: none;
+  padding: 1.25rem 1rem;
+  color: slateblue;
+  border: 0.1rem solid slateblue;
+  font-family: inherit;
+  margin-right: 1rem;
+  border-radius: 0.625rem;
+}
+input::placeholder{
+  color: rgb(194, 194, 194);
+}
+button{
+  background-color: #fff;
+  padding: 1.25rem 1rem;
+  font-size:1.5rem;
+  outline:none;
+  border: 0.1rem solid rgb(194, 194, 194);
+  font-family: inherit;
+  border-radius: 0.625rem;
+  transition: all 0.25s ease-in-out;
+}
+button:hover{
+  background-color: transparent;
+  color: rgb(194, 194, 194);
+  cursor: pointer;
+}
+.section{
+  padding: 1.25rem;
+}
+
+.section .title h1{
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(194, 194, 194);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section .title a{
+  display: block;
+  display: flex;
+  color: rgb(194, 194, 194);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.section .title a:hover{
+  color: rgb(255, 254, 254);
+
+}
+
+.section .cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.section .cards div{
+  background-color: #062038;
+  padding: 1rem;
+  border-radius: 0.625rem;
+
+}
+
+.section .cards div h2{
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.section .cards div ul{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.section .cards div ul li:first-child{
+  color: slategray;
+}
+
+.section .cards div ul li a{
+  color: slategrey;
+  text-decoration: underline;
+}
+
+.section .cards div ul li a:hover {
+  color: #fff;
+}
+
+.section .cards div p {
+  color: slategray;
+}
+
+@media (min-width: 768px) {
+  .section .cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .section .title h1{
+    font-size: 4rem;
+  }
+  form{
+    display:flex;
+    align-items: center;
+  }
+  input{
+    width: 100%;
+  }
+  .section{
+    max-width: 992px;
+    margin: auto;
+  }
 }
